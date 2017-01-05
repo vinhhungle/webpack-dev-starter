@@ -1,11 +1,23 @@
 {
-    "name": "webpack-dev-starter",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Hung Le",
-    "license": "ISC"
+  "name": "webpack-dev-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/main.js",
+  "scripts": {
+    "start:dev": "npm-run-all --parallel dev:*",
+    "dev:webpack": "node_modules/.bin/webpack-dev-server -d",
+    "dev:express": "node_modules/.bin/nodemon --config nodemon.json --debug server/main.js",
+    "build": "node_modules/.bin/webpack -p --config webpack.config-production.js --progress"
+  },
+  "author": "Hung Le",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "npm-run-all": "4.0.0"
+  }
 }
