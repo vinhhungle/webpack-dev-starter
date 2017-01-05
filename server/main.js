@@ -1,9 +1,12 @@
 var express = require('express')
+var path = require('path')
 
 var app = express()
 var PORT = 3000
 
-app.get('/', function (req, res) {
+app.use('/', express.static(path.resolve('./dist')))
+
+app.get('/api', function (req, res) {
   console.log('request url: ', req.originalUrl)
   res.json({ status: 'OK' })
 })

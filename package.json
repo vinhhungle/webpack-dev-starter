@@ -4,6 +4,7 @@
   "description": "",
   "main": "server/main.js",
   "scripts": {
+    "start": "node server/main.js",
     "start:dev": "npm-run-all --parallel dev:*",
     "dev:webpack": "node_modules/.bin/webpack-dev-server -d",
     "dev:express": "node_modules/.bin/nodemon --config nodemon.json --debug server/main.js",
