@@ -1,35 +1,26 @@
 var path = require('path')
-var webpack = require('webpack')
+var autoprefixer = require('autoprefixer')
 
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
+var ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
   context: path.join(__dirname, '/client'),
   entry: {
-    main: './main.js',
-    login: './login.js'
+    main: './main',
+    login: './login'
   },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve('./public/build'),
-    publicPath: '/build/'
+  output: require('./.webpack/output')(ENV),
+  devServer: require('./.webpack/devServer')(ENV),
+  plugins: require('./.webpack/plugins')(ENV),
+  module: require('./.webpack/loaders')(ENV),
+  resolve: {
+    extensions: ['', '.js', '.ts', '.jsx']
   },
-  devServer: {
-    contentBase: 'public',
-    inline: true,
-    port: 8080,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: {'^/api': '/api'}
-      }
-    }
-  },
-  compress: true,
+  postcss: [
+    autoprefixer({
+      browsers: ['last 2 version']
+    })
+  ],
   progress: true,
-  stats: {
-    colors: true
-  },
-  modules: {},
-  plugins: [commonsPlugin]
+  compress: true
 }
