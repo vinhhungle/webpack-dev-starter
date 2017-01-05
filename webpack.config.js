@@ -1,9 +1,13 @@
 var path = require('path')
+var webpack = require('webpack')
+
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
 
 module.exports = {
   context: path.join(__dirname, '/client'),
   entry: {
-    main: './main.js'
+    main: './main.js',
+    login: './login.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -25,5 +29,7 @@ module.exports = {
   progress: true,
   stats: {
     colors: true
-  }
+  },
+  modules: {},
+  plugins: [commonsPlugin]
 }
