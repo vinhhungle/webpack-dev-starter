@@ -57,7 +57,7 @@ All stylesheets will be bundled into `styles.css`
 npm run serve
 ```
 
-It will start a http-server on`http://localhost:8080`
+It will start a http-server on`http://localhost:3000`
 
 ### To serve client build with api server:
 ```bash
