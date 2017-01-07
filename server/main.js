@@ -5,7 +5,7 @@ var express = require('express')
 var path = require('path')
 
 var app = express()
-var PORT = 3000
+var API_SERVER_PORT = 3000
 
 app.use(compression())
 app.use('/', express.static(path.resolve('./dist')))
@@ -15,6 +15,6 @@ app.get('/api', function (req, res) {
   res.json({ status: 'OK' })
 })
 
-app.listen(PORT, function () {
-  console.log('Express server is listening on http://localhost:' + PORT)
+app.listen(API_SERVER_PORT, function () {
+  console.log('Express server is listening on http://localhost:' + API_SERVER_PORT)
 })

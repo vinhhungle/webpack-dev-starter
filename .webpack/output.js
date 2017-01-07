@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = function (ENV) {
   if (ENV === 'production') {
     return {
-      filename: '[name].bundle.min.js',
+      filename: '[name].bundle.js',
       path: path.resolve('./dist/build'),
       publicPath: '/build/'
     }

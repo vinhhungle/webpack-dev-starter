@@ -4,7 +4,7 @@ class AppCtrl {
   }
 
   handleClick () {
-    console.log('Clicked')
+    global.alert('Clicked')
   }
 }
 

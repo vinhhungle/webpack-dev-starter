@@ -1,16 +1,11 @@
-module.exports = function (ENV) {
+module.exports = function (ENV, DEV_SERVER_PORT, PROXY) {
   if (ENV === 'development') {
     return {
       contentBase: 'public',
       stats: 'minimal',
       inline: true,
-      port: 8080,
-      proxy: {
-        '/api': {
-          target: 'http://localhost:3000',
-          pathRewrite: {'^/api': '/api'}
-        }
-      }
+      port: DEV_SERVER_PORT,
+      proxy: PROXY
     }
   }
   return {}

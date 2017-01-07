@@ -1,25 +1,29 @@
 {
-  "name": "webpack-dev-starter",
+  "name": "es6-angular1-express-webpack-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Angular 1.x starter project using webpack and babel to transpile ES6 codes.",
   "main": "server/main.js",
   "scripts": {
-    "start": "node server/main.js",
-    "start:dev": "npm-run-all --parallel dev:*",
-    "dev:express": "node_modules/.bin/nodemon --debug server/main.js",
-    "dev:webpack": "node_modules/.bin/webpack-dev-server -d",
-    "build": "NODE_ENV=production node_modules/.bin/webpack -p --progress"
+    "start": "npm run build && node server/main.js",
+    "serve": "npm run build && node_modules/.bin/serve -p 3000 dist/",
+    "build": "NODE_ENV=production node_modules/.bin/webpack -p --progress",
+    "clean": "rm dist/build/*",
+    "start:dev": "node_modules/.bin/npm-run-all --parallel dev:*",
+    "dev:client": "node_modules/.bin/webpack-dev-server -d --compress --open",
+    "dev:server": "node_modules/.bin/nodemon --debug server/main.js"
   },
-  "author": "Hung Le",
+  "author": "vinhhung.le@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "6.6.1",
     "babel-loader": "6.2.10",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "0.26.1",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
     "imports-loader": "0.7.0",
     "json-loader": "0.5.4",
+    "node-pre-gyp": "^0.6.32",
     "node-sass": "4.1.1",
     "nodemon": "1.11.0",
     "postcss-loader": "1.2.1",
@@ -45,6 +49,7 @@
     "babel-register": "6.18.0",
     "compression": "1.6.2",
     "express": "4.14.0",
-    "npm-run-all": "4.0.0"
+    "npm-run-all": "4.0.0",
+    "serve": "^2.1.2"
   }
 }

@@ -14,7 +14,6 @@ module.exports = function (ENV) {
         test: /\.(scss|css)$/,
         exclude: exclude,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1!postcss-loader')
-        // loader: 'style-loader!css-loader?modules&importLoaders=1!postcss-loader'
       },
       {
         test: /\.(html|tpl)$/,
