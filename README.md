@@ -1,7 +1,5 @@
 # A simple webpack starter project using ES6 and SASS.
 
-The master branch use Angular 1.x but React/JSX, Angular2, Redux, Routers can also be used with easy changes which I will create separate branches.
-
 # Branches:
 * [Angular 1.x branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/angular)
 * [React with React Templates branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/react)
