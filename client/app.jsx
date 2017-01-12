@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import render from './app.rt'
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor (props, context) {
     super(props, context)
     this.state = {
@@ -16,6 +16,8 @@ class App extends React.Component {
   }
 }
 
+App.prototype.render = render
+
 App.propTypes = {
   open: PropTypes.bool
 }
@@ -23,7 +25,3 @@ App.propTypes = {
 App.defaultProps = {
   open: false
 }
-
-App.prototype.render = render
-
-export default App

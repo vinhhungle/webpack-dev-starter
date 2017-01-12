@@ -53,6 +53,7 @@
     "npm-run-all": "4.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router": "^3.0.0",
     "react-templates": "^0.6.1",
     "react-templates-loader": "^0.5.1",
     "serve": "^2.1.2"

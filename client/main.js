@@ -2,11 +2,11 @@ import './main.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './app'
+import Routes from './routes'
 
 let rootEl = document.body.querySelector('#root')
 
 ReactDOM.render(
-  <App />,
+  <Routes />,
   rootEl
 )

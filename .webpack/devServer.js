@@ -5,7 +5,8 @@ module.exports = function (ENV, DEV_SERVER_PORT, PROXY) {
       stats: 'minimal',
       inline: true,
       port: DEV_SERVER_PORT,
-      proxy: PROXY
+      proxy: PROXY,
+      historyApiFallback: true
     }
   }
   return {}
