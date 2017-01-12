@@ -1,6 +1,6 @@
 # A simple webpack starter project using ES6 and SASS.
 
-This branch use Angular 1.x but React/JSX, Angular2, Redux, Routers can also be used with easy changes which I will create separate branches.
+This branch uses React/JSX, React Router and Redux.
 
 # Getting Started
 
