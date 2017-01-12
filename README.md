@@ -1,6 +1,6 @@
 # A simple webpack starter project using ES6 and SASS.
 
-This branch use Angular 1.x.
+This branch uses Angular 1.x.
 
 # Getting Started
 
