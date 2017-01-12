@@ -1,3 +1,1 @@
-import angular from 'angular'
-
-console.log('another page', angular.version)
+console.log('another page')
