@@ -11,6 +11,11 @@ module.exports = function (ENV) {
         loader: 'babel-loader'
       },
       {
+        test: /\.mcss$/,
+        exclude: exclude,
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!resolve-url-loader!sass?sourceMap!postcss'
+      },
+      {
         test: /\.css$/,
         exclude: exclude,
         loader: ExtractTextPlugin.extract('css!resolve-url-loader!postcss?sourceMap')

@@ -1,6 +1,10 @@
 import React, {PropTypes} from 'react'
 import render from './app.rt'
 
+const styles = require('./styles/modules/app.mcss')
+
+console.log('styles', styles)
+
 class App extends React.Component {
   constructor (props, context) {
     super(props, context)
@@ -8,6 +12,7 @@ class App extends React.Component {
       message: 'Hello React',
       open: this.props.open
     }
+    this.styles = styles
   }
 
   handleClick (ev) {

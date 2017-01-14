@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<div>
-  <h1><i class="check"></i> {this.state.message}</h1>
+<div class="{this.styles.root}">
+  <h1 ><i class="check"></i> {this.state.message}</h1>
   <button onClick="(ev) => this.handleClick(ev)">Click Me</button>
-  <p rt-if="this.state.open" key="0">This is my paragraph. It opens and closes by <em>rt-if</em> directive.</p>
+  <p rt-if="this.state.open" key="0" class="{this.styles.text}">This is my paragraph. It opens and closes by <em>rt-if</em> directive.</p>
 </div>
