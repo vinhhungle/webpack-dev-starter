@@ -33,6 +33,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-ui-bootstrap@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/angular-ui-bootstrap/-/angular-ui-bootstrap-2.4.0.tgz#1a46e1bfacedcf50281684a88f5548be01546e7a"
+
 angular@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.1.tgz#a7b6d763a74c157325692619e97257e69d9b6a27"

@@ -29,6 +29,30 @@
     <h1><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{app.message}}</h1>
     <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
     <p><my:button ng:click="app.handleClick()" label="Click Me"></my:button></p>
+
+    <div class="row">
+      
+      <div class="col-lg-4">
+        <div uib-datepicker ng-model="app.myDate" class="well well-sm" datepicker-options="app.dateOptions"></div>
+      </div>
+      
+      <div class="col-lg-4">
+        <p class="input-group">
+          <input type="text" class="form-control" 
+                uib-datepicker-popup="{{app.format}}" 
+                ng-model="app.myDate" 
+                is-open="openDatePicker" 
+                datepicker-options="app.dateOptions" 
+                ng-required="true" 
+                close-text="Close" 
+                alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openDatePicker = true"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+
+    </div>
   </div>
 </div>
 

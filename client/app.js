@@ -1,6 +1,16 @@
 class AppCtrl {
-  constructor () {
+  constructor ($uibModal) {
     this.message = 'Hello Bootstrap!'
+    this.dateOptions = {
+      dateDisabled: false,
+      formatYear: 'yy',
+      maxDate: new Date(2020, 5, 22),
+      minDate: new Date(),
+      startingDay: 1
+    }
+    this.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate']
+    this.format = this.formats[0]
+    this.myDate = new Date()
   }
 
   handleClick () {
