@@ -18,6 +18,9 @@
   font-size: 24px;
   composes: serif-font; /* compose */
   font-weight: 600;
+  @media (max-width: 320px) {
+    font-size: 32px;
+  }
 }
 
 .check {
