@@ -21,7 +21,7 @@ export default function (app) {
       onClick: '&'
     },
     template: `
-      <button ng:click="$ctrl.onClick()">{{$ctrl.label}}</button>
+      <button ng:click="$ctrl.onClick()" class="slds-button slds-button--brand">{{$ctrl.label}}</button>
     `
   })
 }

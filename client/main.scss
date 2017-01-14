@@ -1,11 +1,10 @@
-@import './styles/fonts/opensans_regular/stylesheet.css';
+@import './styles/lightning/scss/index-vf.scss';
 @import './styles/mixins/icon.scss';
 @import './styles/variables.scss';
 
 body {
-  padding: 20px;
-  font-family: open_sansregular, arial, sans-serif;
-  color: $color-orange;
+  margin: 0;
+  padding: 0;
 }
 
 .check {
