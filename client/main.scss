@@ -12,3 +12,10 @@ body {
   @extend .icon;
   background-image: url("./styles/icons/check.svg");
 }
+
+a {
+  &.active {
+    color: red; 
+    font-weight: bolder;
+  }
+}
