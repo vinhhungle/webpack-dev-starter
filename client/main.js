@@ -1,4 +1,5 @@
 import './main.scss'
+
 import angular from 'angular'
 
 let rootEl = document.body.querySelector('#root')
