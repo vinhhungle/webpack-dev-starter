@@ -8,5 +8,6 @@
     <li><a ui-sref="about" ui-sref-active="active">About</a></li>
   </ul>
 
-  <ui-view></ui-view>
+  <ui-view name="main"></ui-view>
+  <ui-view name="sidebar"></ui-view>
 </div>

@@ -7,25 +7,64 @@ export default function (app) {
     template: '<h3>Its the UI-Router hello world app!</h3>'
   })
 
+  app.component('sidebarComp', {
+    template: '<h3>Sidebar contents</h3>'
+  })
+
   app.config(function($stateProvider) {
+    let rootState = {
+      name: 'root',
+      url: '',
+      views: {
+        'main': {
+          template: '<h2>Home</h2>'
+        },
+        'sidebar': {
+          template: '<sidebar-comp />'
+        }
+      }
+    }
+
     let homeState = {
       name: 'home',
-      url: '',
-      template: '<h2>Home</h2>'
+      url: '/',
+      views: {
+        'main': {
+          template: '<h2>Home</h2>'
+        },
+        'sidebar': {
+          template: '<sidebar-comp />'
+        }
+      }
     }
 
     let helloState = {
       name: 'hello',
       url: '/hello',
-      template: '<hello-comp />'
+      views: {
+        'main': {
+          template: '<hello-comp />'
+        },
+        'sidebar': {
+          template: '<sidebar-comp />'
+        }
+      }
     }
 
     let aboutState = {
       name: 'about',
       url: '/about',
-      template: '<about-comp />'
+      views: {
+        'main': {
+          template: '<about-comp />'
+        },
+        'sidebar': {
+          template: '<sidebar-comp />'
+        }
+      }
     }
 
+    $stateProvider.state(rootState)
     $stateProvider.state(homeState)
     $stateProvider.state(helloState)
     $stateProvider.state(aboutState)
