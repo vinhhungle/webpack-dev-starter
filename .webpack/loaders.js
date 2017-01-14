@@ -11,9 +11,14 @@ module.exports = function (ENV) {
         loader: 'babel-loader'
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.css$/,
         exclude: exclude,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1!postcss-loader')
+        loader: ExtractTextPlugin.extract('css!resolve-url-loader!postcss?sourceMap')
+      },
+      {
+        test: /\.scss$/,
+        exclude: exclude,
+        loader: ExtractTextPlugin.extract('css!resolve-url-loader!sass?sourceMap!postcss')
       },
       {
         test: /\.(html|tpl)$/,

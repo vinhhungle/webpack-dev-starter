@@ -1,4 +1,14 @@
+@import './styles/fonts/opensans_regular/stylesheet.css';
+@import './styles/mixins/icon.scss';
+@import './styles/variables.scss';
+
 body {
   padding: 20px;
-  display: flex;
+  font-family: open_sansregular, arial, sans-serif;
+  color: $color-orange;
+}
+
+.check {
+  @extend .icon;
+  background-image: url("./styles/icons/check.svg");
 }
