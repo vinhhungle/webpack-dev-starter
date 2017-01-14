@@ -1,11 +1,10 @@
 @import './styles/fonts/opensans_regular/stylesheet.css';
 @import './styles/mixins/icon.scss';
 @import './styles/variables.scss';
+@import './styles/bootstrap.scss';
 
 body {
-  padding: 20px;
   font-family: open_sansregular, arial, sans-serif;
-  color: $color-orange;
 }
 
 .check {
