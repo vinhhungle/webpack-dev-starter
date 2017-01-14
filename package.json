@@ -13,6 +13,10 @@
     "dev:server": "node_modules/.bin/nodemon --debug server/main.js"
   },
   "author": "vinhhung.le@gmail.com",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhhungle/webpack-dev-starter.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "6.6.1",
