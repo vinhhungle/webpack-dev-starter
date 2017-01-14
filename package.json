@@ -50,6 +50,7 @@
     "compression": "1.6.2",
     "express": "4.14.0",
     "npm-run-all": "4.0.0",
+    "resolve-url-loader": "^1.6.1",
     "serve": "^2.1.2"
   }
 }

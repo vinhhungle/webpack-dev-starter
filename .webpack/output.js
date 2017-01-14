@@ -4,8 +4,7 @@ module.exports = function (ENV) {
   if (ENV === 'production') {
     return {
       filename: '[name].bundle.js',
-      path: path.resolve('./dist/build'),
-      publicPath: '/build/'
+      path: path.resolve('./dist/build')
     }
   }
   return {
