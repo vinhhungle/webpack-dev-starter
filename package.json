@@ -10,10 +10,11 @@
     "clean": "rm dist/build/*",
     "start:dev": "node_modules/.bin/npm-run-all --parallel dev:*",
     "dev:client": "node_modules/.bin/webpack-dev-server -d --compress --open",
+    "dev:client:rs": "node_modules/.bin/webpack-dev-server -d --compress",
     "dev:server": "node_modules/.bin/nodemon --debug server/main.js"
   },
   "author": "vinhhung.le@gmail.com",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/vinhhungle/webpack-dev-starter.git"
   },
@@ -41,6 +42,9 @@
   },
   "dependencies": {
     "angular": "1.6.1",
+    "angular-animate": "^1.6.1",
+    "angular-aria": "^1.6.1",
+    "angular-material": "^1.1.1",
     "babel-core": "6.21.0",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-plugin-syntax-async-functions": "6.13.0",

@@ -33,6 +33,18 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-animate@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.6.1.tgz#19e3b82b7392e2bbdd83af33c0af0d85437f3a14"
+
+angular-aria@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.6.1.tgz#0fcbf1152b4c26e8671daddea7443a1b983434b9"
+
+angular-material@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.1.tgz#ed12f394ba71a9189d664115624f6787a7439af2"
+
 angular@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.1.tgz#a7b6d763a74c157325692619e97257e69d9b6a27"
