@@ -9,10 +9,14 @@
   max-width: 400px;
 }
 
+.serif-font {
+  font-family: Georgia, serif;
+}
+
 .text {
   color: #777;
   font-size: 24px;
-  font-family: helvetica, arial, sans-serif;
+  composes: serif-font; /* compose */
   font-weight: 600;
 }
 
