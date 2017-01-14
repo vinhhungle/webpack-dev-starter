@@ -3,10 +3,14 @@ var path = require('path')
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin')
 
 module.exports = function (ENV) {
   if (ENV === 'production') {
     return [
+      new ngAnnotatePlugin({
+          add: true
+      }),
       new webpack.optimize.CommonsChunkPlugin('common.bundle.js'),
       new ExtractTextPlugin('styles.css'),
       new webpack.DefinePlugin({
