@@ -4,6 +4,7 @@
 
   <ul>
     <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+    <li><a ui-sref="protected" ui-sref-active="active">Protected</a></li>
     <li><a ui-sref="hello" ui-sref-active="active">Hello</a></li>
     <li><a ui-sref="users({filter: null})" ui-sref-active="active">Users</a></li>
     <li><a ui-sref="users({filter: 1})" ui-sref-active="active">Users (filter: 1)</a></li>
@@ -16,7 +17,7 @@
     </li>
   </ul>
 
-  <div ng-if="app.$ngRedux.getState().router.prevState.name !== ''" style="margin-bottom: 15px;">
+  <div ng-if="app.prevState.name !== ''" style="margin-bottom: 15px;">
     <button ng-click="app.goBack()">Go Back</button>
   </div>
 
