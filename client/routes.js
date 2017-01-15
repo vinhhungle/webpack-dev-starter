@@ -12,5 +12,6 @@ export default (app) => {
       .state('home', require('./states/home')())
       .state('hello', require('./states/hello')())
       .state('about', require('./states/about')())
+      .state('about.history', require('./states/about.history')())
   })
 }

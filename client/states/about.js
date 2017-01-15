@@ -3,7 +3,12 @@ export default () => {
     url: '/about',
     views: {
       'main': {
-        template: '<about-comp></about-comp>'
+        template: `
+          <div>
+            <about-comp></about-comp>
+            <ui-view></ui-view>
+          </div>
+        `
       },
       'sidebar': {
         template: '<sidebar-comp></sidebar-comp>'

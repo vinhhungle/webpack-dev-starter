@@ -5,7 +5,11 @@
   <ul>
     <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
     <li><a ui-sref="hello" ui-sref-active="active">Hello</a></li>
-    <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+    <li><a ui-sref="about" ui-sref-active="active">About</a>
+      <ul>
+        <li><a ui-sref="about.history" ui-sref-active="active">History</a></li>
+      </ul>
+    </li>
   </ul>
 
   <ui-view name="main"></ui-view>
