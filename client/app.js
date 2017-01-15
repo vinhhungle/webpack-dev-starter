@@ -11,11 +11,22 @@ export default function (app) {
 }
 
 class AppCtrl {
-  constructor () {
+  constructor ($rootScope, $state) {
+    'ngInject'
+    this.$rootScope = $rootScope
+    this.$state = $state
     this.message = 'Hello Webpack!'
   }
 
   handleClick () {
     console.log('Clicked')
+  }
+
+  goBack () {
+    console.log('go back')
+    let {state, params} = this.$rootScope.prevState
+    if (state.name !== '') {
+      this.$state.go(state.name, params)
+    }
   }
 }

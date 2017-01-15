@@ -4,7 +4,7 @@ export default () => {
     views: {
       'main': {
         template: `
-          <div style="border: solid 1px black; padding: 15px;">
+          <div class="view-container">
             <about-comp></about-comp>
             <ui-view></ui-view>
           </div>
