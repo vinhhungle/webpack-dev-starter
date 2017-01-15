@@ -27,7 +27,7 @@ class Controller {
   $onInit () {
     console.log('users.detail $onInit', this)
     this.storeUnsubscribe = this.$ngRedux.connect(this.mapState, this.mapDispatch)(this)
-    this.getUser(this.$state.params.id)
+    this.findUserById(this.$state.params.id)
     
   }
 
@@ -37,31 +37,13 @@ class Controller {
 
   mapState (state) {
     return {
-      user: state.user,
-      users: state.users
+      user: state.user
     }
   }
 
   mapDispatch (dispatch) {
     return {
-      setUser: (user) => dispatch(userActions.setUser(user)),
-      fetchUserById: (id) => dispatch(userActions.fetchUserById(id))
-    }
-  }
-
-  getUser (id) {
-    let user
-    if (Array.isArray(this.users.collection)) {
-      user = this.users.collection.find((item) => item.id === id)
-      console.log('user', user)
-
-      if (user) {
-        this.setUser(user)
-      } else {
-        this.fetchUserById(id)
-      }
-    } else {
-      this.fetchUserById(id)
+      findUserById: (id) => dispatch(userActions.findUserById(id))
     }
   }
 

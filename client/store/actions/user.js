@@ -1,4 +1,5 @@
 export const SET_USER = 'SET_USER'
+export const FIND_USER_BY_ID = 'FIND_USER_BY_ID'
 export const FETCH_USER_BY_ID = 'FETCH_USER_BY_ID'
 export const FETCH_USER_BY_ID_PENDING = 'FETCH_USER_BY_ID_PENDING'
 export const FETCH_USER_BY_ID_FULFILLED = 'FETCH_USER_BY_ID_FULFILLED'
@@ -24,6 +25,26 @@ export function fetchUserById (id) {
     type: FETCH_USER_BY_ID,
     payload: {
       promise: fetchUserByIdAsync(id)
+    }
+  }
+}
+
+export function findUserById (id) {
+  return (dispatch, getState) => {
+    console.log('getState', getState())
+    const {users} = getState()
+    let user
+    if (Array.isArray(users.collection)) {
+      user = users.collection.find((item) => item.id === id)
+      console.log('user', user)
+
+      if (user) {
+        dispatch(setUser(user))
+      } else {
+        dispatch(fetchUserById(id))
+      }
+    } else {
+      dispatch(fetchUserById(id))
     }
   }
 }
