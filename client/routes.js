@@ -1,9 +1,5 @@
 export default (app) => {
 
-  require('./components/hello')(app)
-  require('./components/about')(app)
-  require('./components/sidebar')(app)
-
   app.config(($stateProvider, $urlRouterProvider) => {
     'ngInject'
     

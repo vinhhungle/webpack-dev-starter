@@ -1,5 +1,4 @@
 export default function (app) {
-  require('./components/myButton')(app)
 
   app.component('app', {
     template: require('./app.tpl'),
