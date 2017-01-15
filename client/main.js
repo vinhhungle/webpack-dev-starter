@@ -10,9 +10,10 @@ import components from './components'
 
 let rootEl = document.body.querySelector('#root')
 
-const app = angular.module('main', [components, uiRouter, ngRedux])
+const app = angular.module('main', [components, uiRouter, ngRedux, ngReduxUiRouter])
 
 require('./routes')(app)
+require('./store')(app)
 
 rootEl.innerHTML = require('./app')(app)
 angular.bootstrap(rootEl, [app.name])

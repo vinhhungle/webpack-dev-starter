@@ -10,11 +10,11 @@ export default function (app) {
 }
 
 class AppCtrl {
-  constructor ($rootScope, $state) {
+  constructor ($state, $ngRedux) {
     'ngInject'
-    this.$rootScope = $rootScope
+    this.$ngRedux = $ngRedux
     this.$state = $state
-    this.message = 'Hello Angular UI Router!'
+    this.message = 'Hello Angular UI Router Redux!'
   }
 
   handleClick () {
@@ -23,9 +23,11 @@ class AppCtrl {
 
   goBack () {
     console.log('go back')
-    let {state, params} = this.$rootScope.prevState
-    if (state.name !== '') {
-      this.$state.go(state.name, params)
+    let {prevState, prevParams} = this.$ngRedux.getState().router
+    console.log('prevState', prevState)
+
+    if (prevState.name !== '') {
+      this.$state.go(prevState.name, prevParams)
     }
   }
 }

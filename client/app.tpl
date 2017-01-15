@@ -16,7 +16,7 @@
     </li>
   </ul>
 
-  <div ng-if="app.$rootScope.prevState.state.name !== ''" style="margin-bottom: 15px;">
+  <div ng-if="app.$ngRedux.getState().router.prevState.name !== ''" style="margin-bottom: 15px;">
     <button ng-click="app.goBack()">Go Back</button>
   </div>
 
