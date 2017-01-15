@@ -15,7 +15,7 @@ class AppCtrl {
     'ngInject'
     this.$rootScope = $rootScope
     this.$state = $state
-    this.message = 'Hello Webpack!'
+    this.message = 'Hello Angular UI Router!'
   }
 
   handleClick () {
