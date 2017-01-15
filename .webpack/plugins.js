@@ -11,7 +11,7 @@ module.exports = function (ENV) {
       new ngAnnotatePlugin({
           add: true
       }),
-      new webpack.optimize.CommonsChunkPlugin('common.bundle.js'),
+      // new webpack.optimize.CommonsChunkPlugin('common.bundle.js'),
       new ExtractTextPlugin('styles.css'),
       new webpack.DefinePlugin({
         'process.env': {
@@ -36,7 +36,7 @@ module.exports = function (ENV) {
     ]
   }
   return [
-    new webpack.optimize.CommonsChunkPlugin('common.bundle.js'),
+    // new webpack.optimize.CommonsChunkPlugin('common.bundle.js'),
     new ExtractTextPlugin('styles.css')
   ]
 }

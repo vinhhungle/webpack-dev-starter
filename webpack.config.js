@@ -14,7 +14,7 @@ module.exports = {
   context: path.join(__dirname, '/client'),
   entry: {
     main: './main',
-    another: './another'
+    // another: './another'
   },
   output: require('./.webpack/output')(ENV),
   devServer: require('./.webpack/devServer')(ENV, DEV_SERVER_PORT, PROXY),
