@@ -18,6 +18,7 @@ export default () => {
 }
 
 function dataResolver ($stateParams) {
+  'ngInject'
   console.log('$stateParams', $stateParams)
   return new Promise((resolve, reject) => {
     resolve({ status: 'OK' })
@@ -26,6 +27,7 @@ function dataResolver ($stateParams) {
 
 class Controller {
   constructor (data) {
+    'ngInject'
     console.log('HelloState', data)
     this.status = data.status
   }
