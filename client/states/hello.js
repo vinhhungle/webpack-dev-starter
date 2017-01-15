@@ -4,6 +4,9 @@ export default () => {
     resolve: {
       data: dataResolver
     },
+    custom: {
+      test: 1
+    },
     views: {
       'main': {
         template: '<hello-comp status="hello.status"></hello-comp>',
@@ -26,10 +29,13 @@ function dataResolver ($stateParams) {
 } 
 
 class Controller {
-  constructor (data) {
+  constructor (data, $state) {
     'ngInject'
     console.log('HelloState', data)
     this.status = data.status
+
+    let customData = $state.get('hello').custom
+    console.log('customData', customData)
   }
 
   $onInit () {
