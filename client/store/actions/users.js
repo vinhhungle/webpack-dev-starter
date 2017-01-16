@@ -1,3 +1,4 @@
+export const SET_FILTER = 'SET_FILTER'
 export const FETCH_USERS = 'FETCH_USERS'
 export const FETCH_USERS_PENDING = 'FETCH_USERS_PENDING'
 export const FETCH_USERS_FULFILLED = 'FETCH_USERS_FULFILLED'
@@ -14,5 +15,12 @@ export function fetchUsers () {
     payload: {
       promise: fetchUsersAsync()
     }
+  }
+}
+
+export function setFilter (payload) {
+  return {
+    type: SET_FILTER,
+    payload
   }
 }

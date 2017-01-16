@@ -17,14 +17,16 @@ export default () => {
 }
 
 class Controller {
-  constructor($state, $ngRedux) {
+  constructor($stateParams, $ngRedux) {
     'ngInject'
     this.$ngRedux = $ngRedux
+    this.$stateParams = $stateParams
   }
 
   $onInit () {
     console.log('users $onInit', this)
     this.storeUnsubscribe = this.$ngRedux.connect(this.mapState, this.mapDispatch)(this)
+    this.setFilter(this.$stateParams.filter)
     this.fetchUsers()
   }
 
@@ -40,7 +42,17 @@ class Controller {
 
   mapDispatch (dispatch) {
     return {
-      fetchUsers: () => dispatch(usersActions.fetchUsers())
+      fetchUsers: () => dispatch(usersActions.fetchUsers()),
+      setFilter: (filter) => dispatch(usersActions.setFilter(filter))
     }
   }
+
+  getVisibleUsers () {
+    let {filter, collection} = this.users
+    if (filter) {
+      return collection.filter((item) => item.name.indexOf(filter) > -1)
+    }
+    return collection
+  }
+  
 }
