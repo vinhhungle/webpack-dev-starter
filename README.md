@@ -2,6 +2,8 @@
 
 # Branches:
 * [Angular 1.x branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/angular)
+* [Angular 1.x with UI Router branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/angular-ui-router)
+* [Angular 1.x with UI Router and Redux branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/angular-ui-router-redux)
 * [React with React Templates branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/react)
 * [React with React Router branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/react-router)
 * [React with React Router Redux branch ](https://github.com/vinhhungle/webpack-dev-starter/tree/react-router-redux)
