@@ -1,6 +1,6 @@
-# A simple webpack starter project using ES6 and SASS.
+# A simple webpack starter project using TypeScript and SASS.
 
-This branch uses React/JSX.
+This branch uses React and TypeScript.
 
 # Getting Started
 

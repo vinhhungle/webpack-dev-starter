@@ -21,7 +21,7 @@ module.exports = {
   plugins: require('./.webpack/plugins')(ENV),
   module: require('./.webpack/loaders')(ENV),
   resolve: {
-    extensions: ['', '.js', '.ts', '.jsx']
+    extensions: ['', '.js', '.ts', '.jsx', '.tsx']
   },
   postcss: [
     autoprefixer({
