@@ -8,7 +8,7 @@ module.exports = function (ENV) {
       {
         test: /\.(tsx?)$/,
         exclude: exclude,
-        loader: 'awesome-typescript-loader'
+        loaders: ['babel-loader', 'awesome-typescript-loader']
       },
       {
         test: /\.(jsx?)$/,
