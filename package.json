@@ -16,6 +16,7 @@
   "author": "vinhhung.le@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^7.0.5",
     "autoprefixer": "6.6.1",
     "awesome-typescript-loader": "^3.0.8",
     "babel-loader": "6.2.10",

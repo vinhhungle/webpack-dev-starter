@@ -11,6 +11,10 @@ module.exports = function (ENV) {
         loaders: ['babel-loader', 'awesome-typescript-loader']
       },
       {
+        test: /\.rt$/,
+        loaders: ['react-templates-loader?modules=commonjs']
+      },
+      {
         test: /\.(jsx?)$/,
         exclude: exclude,
         loader: 'babel-loader'
