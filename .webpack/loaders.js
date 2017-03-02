@@ -31,10 +31,6 @@ module.exports = function (ENV) {
         loader: 'raw-loader'
       },
       {
-        test: /\.rt$/,
-        loaders: ['babel-loader?presets[]=es2015', 'react-templates-loader?modules=es6']
-      },
-      {
         test: /\.(json)$/,
         exclude: exclude,
         loader: 'json-loader'
